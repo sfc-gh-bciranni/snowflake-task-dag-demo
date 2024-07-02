@@ -1,7 +1,7 @@
 from datetime import timedelta
 
 from snowflake.core import Root
-from snowflake.core.task import StoredProcedureCall
+from snowflake.core.task import StoredProcedureCall, Cron
 from snowflake.core.task.dagv1 import DAG, DAGTask, DAGOperation
 from snowflake.snowpark import Session
 from snowflake.snowpark.functions import sum as sum_
@@ -14,7 +14,7 @@ session = authenticate()
 root = Root(session)
 
 
-with DAG("my_dag", schedule='30 7 * * *', warehouse=session.get_current_warehouse()) as dag:
+with DAG("my_dag", schedule=Cron('30 7 * * *', timezone='America/New_York'), warehouse=session.get_current_warehouse()) as dag:
   # Create a task that runs some SQL.
   dag_task1 = DAGTask(
     name="dag_sample_task_1",
