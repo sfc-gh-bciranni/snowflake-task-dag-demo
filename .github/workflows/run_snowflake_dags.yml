@@ -35,5 +35,5 @@ jobs:
         SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
         SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
       run: |
-        chmod +x run_changed_dags.sh
-        ./run_changed_dags.sh
+        chmod +x run_dags.sh
+        ./run_dags.sh
