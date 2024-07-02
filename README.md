@@ -1,6 +1,6 @@
 # Snowflake Task DAGs API Demo
 
-**Disclaimer**: This is meant to be a demo of what you can do on Snowflake to integrate the Task DAG API with your version control system. This is **NOT** intended to be your production solution. I encourage you to take inspiration here!
+**Disclaimer**: This is meant to be a demo of what you can do on Snowflake to integrate the Task DAG API with your version control system. This is **NOT** intended to be your production solution and is not endorsed by Snowflake as such. I encourage you to take inspiration here!
 
 ## Task DAGs API Overview
 
