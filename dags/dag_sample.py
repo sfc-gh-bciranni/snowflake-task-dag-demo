@@ -10,7 +10,7 @@ from auth.snowflake_auth import authenticate
 from sql.utils import load_sql
 
 # Authenticate to Snowflake.
-session = authenticate(local=True, connection_name="github_service_conn")
+session = authenticate()
 root = Root(session)
 
 
