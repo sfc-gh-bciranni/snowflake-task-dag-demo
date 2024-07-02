@@ -25,6 +25,11 @@ with DAG("my_dag", schedule=timedelta(days=1), warehouse=session.get_current_war
     name='dag_sample_task_2',
     definition=load_sql(rel_path="my_dag/dag_sample_task_2.sql")
   )
+  # Create another task
+  dag_task3 = DAGTask(
+    name='dag_sample_task_3',
+    definition=load_sql(rel_path="my_dag/dag_sample_task_3.sql")
+  )
 # Shift right and left operators can specify task relationships.
 dag_task1 >> dag_task2  # dag_task1 is a predecessor of dag_task2
 schema = root.databases["github_demo"].schemas["github_schema"]
