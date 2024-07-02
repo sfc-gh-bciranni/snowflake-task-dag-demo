@@ -18,7 +18,7 @@ class PathNotSpecifiedException(Exception):
     """Exception raised when a path is not specified."""
     pass
 
-def load_sql(abs_path: Optional[str], rel_path: Optional[str]) -> str:
+def load_sql(abs_path: Optional[str] = None, rel_path: Optional[str] = None) -> str:
     """Load a SQL file from disk.
 
     Args:
