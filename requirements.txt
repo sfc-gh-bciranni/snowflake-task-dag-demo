@@ -1,3 +1,3 @@
 snowflake_connector_python==3.11.0
 snowflake_snowpark_python==1.19.0
-snowflakke==0.10.0
+snowflake==0.10.0
